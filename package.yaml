@@ -23,6 +23,12 @@ ghc-options: -Wall
 library:
   dependencies:
   - base
+  - lens
+  - mtl
+  - text
+  - fsnotify
+  - optparse-applicative
+  - process
   source-dirs: library
 
 executables:
