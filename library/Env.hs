@@ -16,22 +16,16 @@ import Control.Monad.Reader(
   )
 import Control.Monad.IO.Class(MonadIO)
 
-data Options = Options
-    { _optionsVerbose :: Bool
-    , _optionsCommand :: [String]
-    } deriving Show
+data Options = Options { _optionsCommand :: [String] } deriving Show
 
 class HasOptions a where
   getOptions :: Lens' a Options
-  getVerbose :: Lens' a Bool
   getCommand :: Lens' a [String]
 
-  getVerbose = getOptions . getVerbose
   getCommand = getOptions . getCommand
 
 instance HasOptions Options where
   getOptions = id
-  getVerbose = lens _optionsVerbose (\ o v -> o{ _optionsVerbose = v })
   getCommand = lens _optionsCommand (\ o c -> o{ _optionsCommand = c })
 
 data AppConfig = AppConfig {
