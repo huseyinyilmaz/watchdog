@@ -1,33 +1,26 @@
 # [watchdog][]
 
-Thanks for starting a project with Haskeleton! If you haven't heard of it
-before, I suggest reading the introductory blog post. You can find it here:
-<http://taylor.fausak.me/2014/03/04/haskeleton-a-haskell-project-skeleton/>.
+Watchdog is a command line utility that runs given command on filesystem changes.
 
-Before you get started, there are a few things that this template couldn't
-provide for you. You should:
+``` sh
+# watchdog --help
+Execute a command on file system changes in current directory.
 
--   Add a synopsis to `package.yaml`. It should be a short (one sentence)
-    explanation of your project.
+Usage: watchdog command
 
--   Add a description to `package.yaml`. This can be whatever you want it to
-    be.
+Available options:
+  -h,--help                Show this help text
 
--   Add a category to `package.yaml`. A list of categories is available on
-    Hackage at <http://hackage.haskell.org/packages>.
+Example: $ watchdog echo There was a change on current directory
+```
+## How to get it
 
--   Rename `library/Example.hs` to whatever you want your top-level module to
-    be called. Typically this is the same as your package name but in
-    `CamelCase` instead of `kebab-case`.
+### Get precompiled binary
 
-    -   Don't forget to rename the reference to it in
-        `executable/Main.hs`!
+You can get precompiled binary from [release][] page.
 
--   If you are on an older version of Stack (<1.0.4), delete `package.yaml` and
-    remove `/*.cabal` from your `.gitignore`.
 
-Once you've done that, start working on your project with the Stack commands
-you know and love.
+To compile source code following commands can be used.
 
 ``` sh
 # Build the project.
@@ -46,3 +39,4 @@ stack haddock
 Thanks again, and happy hacking!
 
 [watchdog]: https://github.com/githubuser/watchdog
+[release]: https://github.com/huseyinyilmaz/watchdog/releases
