@@ -19,6 +19,7 @@ Example: $ watchdog echo There was a change on current directory
 
 You can get precompiled binary from [release][] page.
 
+### Compile source
 
 To compile source code following commands can be used.
 
