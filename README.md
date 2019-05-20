@@ -2,6 +2,8 @@
 
 Watchdog is a command line utility that runs given command on filesystem changes.
 
+Here is the help output:
+
 ``` sh
 # watchdog --help
 Execute a command on file system changes in current directory.
@@ -12,6 +14,16 @@ Available options:
   -h,--help                Show this help text
 
 Example: $ watchdog echo There was a change on current directory
+```
+
+Here are some example usages
+```
+# Run build every time there is an update in current directory.
+watchdog make build
+
+# Copy current directory to server every time there is an update.
+# You can wrap your command with
+watchdog "scp . server.com:project_dir"
 ```
 ## How to get it
 
