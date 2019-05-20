@@ -22,7 +22,6 @@ Here are some example usages
 watchdog make build
 
 # Copy current directory to server every time there is an update.
-# You can wrap your command with
 watchdog "scp . server.com:project_dir"
 ```
 ## How to get it
